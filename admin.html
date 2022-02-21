@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+  <title>Chat admin</title>
+</head>
+<body>
+  <input type="checkbox" id="small-device">
+  <input type="checkbox" id="check-toggle">
+  <div class="sidebar" id="side">
+
+    <div class="top">
+      <label for="small-device"><i class="fa fa-arrow-left" onclick="hideSmall()"></i></label>
+      <div class="logo">
+        <img src="images/images/logo/mylogo.png" alt="" height="40px">
+        <p class="logo-text">Logged in</p>
+      </div>
+      <a href="../frondend/login.html"><i class="fa fa-sign-out"></i></a>
+    </div>
+
+    <div class="middle">
+      <div class="image">
+        <img src="images/logo/seku.jpeg" alt="" height="60px">
+      </div>
+      <div class="description">
+        <p>Michael Douglas</p>
+        <p>Software developer</p>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <ul class="list-container">
+        <li>
+          <a href="">
+            <i class="fa fa-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-bar-chart"></i>
+            <span>Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-calendar"></i>
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-envelope"></i>
+            <span>Mailbot</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-check"></i>
+            <span>Task</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-bookmark"></i>
+            <span>Events</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-reply"></i>
+            <span>Contacts</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-lock"></i>
+            <span>Authentications</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom-side">
+      <div class="info">
+        <i class="fa fa-info"></i>
+      </div>
+      <div class="feedback">
+        <p>-feedback-</p>
+      </div>
+      <div class="copyright">
+        <p>&copy;2021GtechamourDevops</p>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <header>
+      <div class="toggle">
+        <label for="check-toggle"><i class="fa fa-bars" onclick="smallShow()"></i></label>
+      </div>
+      <div class="search">
+        <form action="" method="post">
+          <input type="search" name="search" id="" placeholder="Search your favorite...">
+           <i class="fa fa-search"></i>
+        </form>
+      </div>
+      <div class="notifications">
+        <div class="mails">
+           <i class="fa fa-envelope" onclick="showMail()"></i>
+           <div class="toggle-mail" id="mails">
+            <p class="name">Resent emails updates</p>
+            <div class="mails-cont">
+              <ul class="email-list">
+                <li>
+                  <a href="">
+                   <div class="top">
+                    <i class="fa fa-envelope"></i>
+                    <p class="person">From:Michael Douglas</p>
+                    <p style="color: rgb(3, 224, 3); text-decoration: none;">Time: Now</p>
+                   </div>
+                    <span><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam officiis aliquam, totam tempore dolores assumenda tate ex.</p></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="status">
+              <p>Total Unread: 20393</p>
+            </div>
+           </div>
+        </div>
+        <div class="bell">
+           <i class="fa fa-bell" onclick="showNotifications()"></i>
+           <div class="toggle-notification" id="notifications">
+            <p class="name">Resent notification</p>
+            <div class="notification-cont">
+              <ul class="notification-list">
+                <li>
+                  <a href="">
+                   <div class="top-notify">
+                    <i class="fa fa-bell"></i>
+                    <p class="person">From:Michael</p>
+                    <p style="color: rgb(3, 224, 3); text-decoration: none;">Time: 12noon</p>
+                   </div>
+                    <span><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam officiis aliquam, totam tempore dolores assumenda tate ex.</p></span>
+                  </a>
+                </li>
+              </ul>
+              
+            </div>
+            <div class="status">
+              <p>Total notifications: 1000</p>
+            </div>
+           </div>
+        </div>
+        <div class="settings">
+           <i class="fa fa-cog" onclick="toggleSet()"></i>
+           <div class="toggle-setting" id="profile">
+            <p class="name">Your Profile Settings</p>
+            <div class="profile">
+              <ul class="profile-container">
+                <li><a href=""><i class="fa fa-user"></i><span>Change Profile</span></a></li>
+                <li><a href=""><i class="fa fa-upload"></i><span>My Updates</span></a></li>
+                <li><a href=""><i class="fa fa-pie-chart"></i><span>My Activities</span></a></li>
+                <li><a href=""><i class="fa fa-calendar"></i><span>My Calendar</span></a></li>
+                <li><a href=""><i class="fa fa-lock"></i><span>Change password</span></a></li>
+                <li><a href=""><i class="fa fa-sign-out"></i><span>Logout</span></a></li>
+              </ul>
+            </div>
+            <div class="status">
+              <p>Logedin as: Michael Douglas</p>
+            </div>
+           </div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+     <div class="top-cards">
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa fa-thumbs-up" style="color: purple;"></i>
+          </div>
+          <div class="totals">
+            <p style="color: white;">1,250</p>
+          </div>
+          <div class="descriptions">
+            <p style="color: purple;">Total likes</p>
+          </div>
+          <span class="together">
+            <div class="images">
+              <img src="images/images/mainprofile.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/features.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/gallery-3.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/gallery-4.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/departments-6.png" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/departments-4.jpg" alt="" height="20px">
+            </div>
+          </span>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa fa-bell" style="color: orangered;"></i>
+          </div>
+          <div class="totals">
+            <p style="color: white;">90,258</p>
+          </div>
+          <div class="descriptions">
+            <p style="color: orangered;">Total Subscribers</p>
+          </div>
+          <span class="together">
+            <div class="images">
+              <img src="images/images/mainprofile.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/features.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/gallery-3.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/gallery-4.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/departments-6.png" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/departments-4.jpg" alt="" height="20px">
+            </div>
+          </span>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa fa-share" style="color: skyblue;"></i>
+          </div>
+          <div class="totals">
+            <p style="color: white;">8,374,652</p>
+          </div>
+          <div class="descriptions">
+            <p style="color: skyblue;">Total followers</p>
+          </div>
+          <span class="together">
+            <div class="images">
+              <img src="images/images/mainprofile.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/features.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/gallery-3.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/gallery-4.jpg" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/departments-6.png" alt="" height="20px">
+            </div>
+            <div class="images">
+              <img src="images/slider/departments-4.jpg" alt="" height="20px">
+            </div>
+          </span>
+        </div>
+     </div>
+
+     <div class="dashboard-graphs">
+        <div class="left-graph">
+          <div id="graph">
+          </div>
+        </div>
+        <div class="right-graph">
+          <div class="chat" id="pie" style="color: white;">
+          </div>
+        </div>
+     </div>
+     <!-- other content divs goes here -->
+     <!-- end of other content divs -->
+    </div>
+  </div>
+
+
+
+  <script src="js/index.js"></script>
+  <script src="assets/morris.js-0.5.1 (1)/morris.js-0.5.1/morris.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  <script>
+      Morris.Bar({
+        element: 'graph',
+        data: [
+          { y: 'Likes', a: 60, b: 50 },
+          { y: 'Comments', a: 45,  b: 25 },
+          { y: 'Followers', a: 100,  b: 80 },
+          { y: 'Following', a: 35,  b: 45 },
+          { y: 'Groups', a: 50,  b: 40 },
+          { y: 'Members', a: 75,  b: 65 },
+          { y: 'Summary', a: 100, b: 90 }
+        ],
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['Series A', 'Series B']
+      });
+  </script>
+  <script>
+      Morris.Donut({
+        element: 'pie',
+        data: [
+          {label: "Download Sales", value: 12},
+          {label: "In-Store Sales", value: 30},
+          {label: "Mail-Order Sales", value: 20}
+        ]
+      });
+  </script>
+</body>
+
+</html>
